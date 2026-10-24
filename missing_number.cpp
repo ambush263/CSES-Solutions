@@ -3,9 +3,16 @@ using namespace std;
 typedef long long ll;
 
 void solve() {
-    int n;
+    ll n;
     cin >> n;
-    cout << n * 2 << "\n";
+    ll total = n * (n + 1) / 2;
+    for (int i = 0; i < n - 1; i++) {
+        ll x;
+        cin >> x;
+        total -= x;
+    }
+    cout << total;
+
 }
 
 int main() {
